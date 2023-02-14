@@ -3,10 +3,11 @@ import { useState } from "react";
 
 function Todos(props) {
   const [todos, setTodos] = useState([]);
-  createTodosItem = (e) => {
+  function createTodosItem(e) {
     const newTodoItem = [{ content: e.target.value, complete: false }];
     setTodos(newTodoItem);
-  };
+  }
+  console.log(todos);
   return (
     <div className="todos">
       <div className="todos__input_field">
